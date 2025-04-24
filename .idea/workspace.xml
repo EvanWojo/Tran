@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bbe2707d-5279-4304-bca5-839c2cf623e5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSI 311.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tran.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/AssignmentNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/BooleanLiteralNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/BooleanOpNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/BuiltInMethodDeclarationNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/CharLiteralNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/ClassNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/CompareNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/ConstructorNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/ElseNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/ExpressionNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/IfNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/InterfaceNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/LoopNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/MathOpNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/MemberNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/MethodCallExpressionNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/MethodCallStatementNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/MethodDeclarationNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/MethodHeaderNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/NewNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/NotOpNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/NumericLiteralNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/StatementNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/StringLiteralNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/TranNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/VariableDeclarationNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/VariableReferenceNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interpreter/BooleanIDT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interpreter/CharIDT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interpreter/ConsoleWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interpreter/Interpreter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interpreter/InterpreterDataType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interpreter/NumberIDT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interpreter/ObjectIDT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interpreter/ReferenceIDT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interpreter/StringIDT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Celsius.tran" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/CelsiusLexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/CelsiusParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example1.tran" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example1LexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example1ParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example2.tran" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example2LexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example2ParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example3.tran" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example3LexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example3ParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example4.tran" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example4LexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example4ParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example5.tran" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example5LexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example5ParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example6.tran" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example6LexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example6ParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example7.tran" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example7LexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Example7ParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Fahrenheit.tran" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/FahrenheitLexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/FahrenheitParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/InterfaceExample.tran" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/InterfaceExampleLexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/InterfaceExampleParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/InterpreterTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Lexer1KeywordTestLexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Lexer1MixedTestLexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Lexer1WordTestLexerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/LexerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/LexerTests2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Parser1Tests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Parser2Tests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/Parser3Tests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/ParserTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/PrivateLexer2Tests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/PrivateLexerTestsAssignment1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tran/Lexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tran/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tran/SyntaxErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tran/TextManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tran/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tran/TokenManager.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2sarUyOggUjabaAAaUfMqGCEmIj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.CelsiusLexerTest.CelsiusLexerTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CelsiusParserTest.CelsiusParserTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Example1LexerTest.Example1LexerTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Example1ParserTest.Example1ParserTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Example1ParserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Example2LexerTest.Example2LexerTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Example2ParserTest.Example2ParserTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Example3LexerTest.Example3LexerTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Example3ParserTest.Example3ParserTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Example4LexerTest.Example4LexerTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Example5ParserTest.Example5ParserTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Example6ParserTest.Example6ParserTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Example7ParserTest.Example7ParserTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FahrenheitParserTest.FahrenheitParserTestTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InterpreterTests.Loop1.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.InterpreterTests.SimpleAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InterpreterTests.SimpleAddInstantiate.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.InterpreterTests.SimpleAddInstantiateAndPrint.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InterpreterTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InterpreterTests.student.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Lexer1KeywordTestLexerTest.Lexer1KeywordTestLexerTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.Lexer1MixedTestLexerTest.Lexer1MixedTestLexerTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.Lexer1WordTestLexerTest.Lexer1WordTestLexerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LexerTests.IndentTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LexerTests.MultilineLexerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LexerTests.NotEqualsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LexerTests.SimpleLexerTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.LexerTests.TwoCharacterTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LexerTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LexerTests2.KeyWordLexerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LexerTests2.QuotedStringLexerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LexerTests2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Parser2Tests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Parser2Tests.testClassIf.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Parser2Tests.testClassImplements.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Parser2Tests.testClassParsing.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.Parser2Tests.testConstructorParsing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Parser2Tests.testLoop.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Parser2Tests.testMembers_and_methoddeclaration.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Parser3Tests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Parser3Tests.testDisambiguate.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.Parser3Tests.testVariableReference.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Parser3Tests.test_if_else.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Parser3Tests.testassign.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Parser3Tests.testloop.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.ParserTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ParserTests.testClassIf.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.ParserTests.testClassIfElse.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ParserTests.testClassWithMethodsAndMembers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ParserTests.testClassWithMultipleMembers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ParserTests.testClassWithOneMethod.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ParserTests.testDeclarationAndInitialization.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ParserTests.testInterface.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ParserTests.testLoopCondition.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ParserTests.testLoopConditionWithVariable.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ParserTests.testLoopVariable.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ParserTests.testMethodCallWithMulitpleVariables.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrivateLexer2Tests.IndentTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrivateLexer2Tests.KeyWordLexerTest_1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrivateLexer2Tests.KeyWordLexerTest_2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrivateLexer2Tests.TestIt.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.PrivateLexer2Tests.character_and_line_position.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrivateLexer2Tests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrivateLexerTestsAssignment1.MultilineLexerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrivateLexerTestsAssignment1.SimpleLexerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrivateLexerTestsAssignment1.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="JUnit.InterpreterTests.Loop1">
+    <configuration name="CelsiusParserTest.CelsiusParserTestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSI 311" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CelsiusParserTest" />
+      <option name="METHOD_NAME" value="CelsiusParserTestTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FahrenheitParserTest.FahrenheitParserTestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSI 311" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.FahrenheitParserTest" />
+      <option name="METHOD_NAME" value="FahrenheitParserTestTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InterpreterTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSI 311" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.InterpreterTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InterpreterTests.Loop1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSI 311" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.InterpreterTests" />
+      <option name="METHOD_NAME" value="Loop1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InterpreterTests.student" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSI 311" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.InterpreterTests" />
+      <option name="METHOD_NAME" value="student" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InterpreterTests.Loop1" />
+        <item itemvalue="JUnit.FahrenheitParserTest.FahrenheitParserTestTest" />
+        <item itemvalue="JUnit.CelsiusParserTest.CelsiusParserTestTest" />
+        <item itemvalue="JUnit.InterpreterTests" />
+        <item itemvalue="JUnit.InterpreterTests.student" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.153" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.153" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bbe2707d-5279-4304-bca5-839c2cf623e5" name="Changes" comment="" />
+      <created>1738704545443</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738704545443</updated>
+      <workItem from="1738704546441" duration="6423000" />
+      <workItem from="1738883136782" duration="218000" />
+      <workItem from="1738958018036" duration="32000" />
+      <workItem from="1739491043527" duration="8611000" />
+      <workItem from="1739755699073" duration="8694000" />
+      <workItem from="1739802278562" duration="6551000" />
+      <workItem from="1739917764718" duration="11000" />
+      <workItem from="1741387307710" duration="4796000" />
+      <workItem from="1741893618043" duration="12000" />
+      <workItem from="1741900191861" duration="1839000" />
+      <workItem from="1741913968023" duration="6000" />
+      <workItem from="1742929959453" duration="8787000" />
+      <workItem from="1743107219964" duration="11000" />
+      <workItem from="1743111070999" duration="47000" />
+      <workItem from="1743111142764" duration="1231000" />
+      <workItem from="1743380321628" duration="7930000" />
+      <workItem from="1743432500364" duration="1444000" />
+      <workItem from="1743710114552" duration="7000" />
+      <workItem from="1744321156953" duration="380000" />
+      <workItem from="1744991154905" duration="32407000" />
+      <workItem from="1745079568532" duration="11572000" />
+      <workItem from="1745256151554" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tests/LexerTests.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tests/PrivateLexer2Tests.java</url>
+          <line>248</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tests/CelsiusLexerTest.java</url>
+          <line>298</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tests/Example1LexerTest.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

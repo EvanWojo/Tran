@@ -1,0 +1,16 @@
+class fahrenheit
+    number temperature
+            
+    construct(number t)
+        temperature = t
+       
+    fromCelsius(celsius c)
+        temperature = (c.get() * 9 / 5 ) + 32
+
+    get() : number c
+        c = temperature 
+        
+    toCelsius() : celsius c 
+        number convert
+        convert = (temperature -32)*5/9
+        c = new celsius(convert)

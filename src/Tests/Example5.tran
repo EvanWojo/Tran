@@ -1,0 +1,7 @@
+class Example5
+    printNumbers()
+		number temp
+		loop temp = x.times()
+			console.print (temp)
+    shared main()
+		printNumbers() 

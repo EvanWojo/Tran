@@ -1,0 +1,73 @@
+package Tests;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import java.util.LinkedList;
+import AST.*;
+import Tran.*;
+public class Example1ParserTest {
+
+	@Test
+	public void Example1ParserTestTest() throws Exception {
+		var tokens = new LinkedList<Token>();
+		tokens.add(new Token(Token.TokenTypes.CLASS, 1, 5));
+		tokens.add(new Token(Token.TokenTypes.WORD, 1, 14, "Example1"));
+		tokens.add(new Token(Token.TokenTypes.NEWLINE, 2, 0));
+		tokens.add(new Token(Token.TokenTypes.INDENT, 2, 4));
+		tokens.add(new Token(Token.TokenTypes.WORD, 2, 10, "number"));
+		tokens.add(new Token(Token.TokenTypes.WORD, 2, 12, "x"));
+		tokens.add(new Token(Token.TokenTypes.NEWLINE, 3, 0));
+		tokens.add(new Token(Token.TokenTypes.WORD, 3, 10, "string"));
+		tokens.add(new Token(Token.TokenTypes.WORD, 3, 12, "y"));
+		tokens.add(new Token(Token.TokenTypes.NEWLINE, 4, 0));
+		tokens.add(new Token(Token.TokenTypes.CONSTRUCT, 4, 13));
+		tokens.add(new Token(Token.TokenTypes.LPAREN, 4, 14));
+		tokens.add(new Token(Token.TokenTypes.RPAREN, 4, 15));
+		tokens.add(new Token(Token.TokenTypes.NEWLINE, 5, 0));
+		tokens.add(new Token(Token.TokenTypes.INDENT, 5, 8));
+		tokens.add(new Token(Token.TokenTypes.WORD, 5, 9, "x"));
+		tokens.add(new Token(Token.TokenTypes.ASSIGN, 5, 11));
+		tokens.add(new Token(Token.TokenTypes.NUMBER, 5, 13, "0"));
+		tokens.add(new Token(Token.TokenTypes.NEWLINE, 6, 0));
+		tokens.add(new Token(Token.TokenTypes.WORD, 6, 9, "y"));
+		tokens.add(new Token(Token.TokenTypes.ASSIGN, 6, 11));
+		tokens.add(new Token(Token.TokenTypes.QUOTEDSTRING, 6, 14));
+		tokens.add(new Token(Token.TokenTypes.NEWLINE, 7, 0));
+		tokens.add(new Token(Token.TokenTypes.DEDENT, 7, 0));
+		tokens.add(new Token(Token.TokenTypes.DEDENT, 7, 0));
+		var tran = new TranNode();
+		var p = new Parser(tran,tokens);
+		p.Tran();
+		Assertions.assertEquals(1,tran.Classes.size());
+		Assertions.assertEquals("Example1",tran.Classes.get(0).name);
+		Assertions.assertEquals(0,tran.Classes.get(0).interfaces.size());
+		Assertions.assertEquals(1,tran.Classes.get(0).constructors.size());
+		Assertions.assertEquals(0,tran.Classes.get(0).constructors.get(0).parameters.size());
+		Assertions.assertEquals(2,tran.Classes.get(0).constructors.get(0).statements.size());
+		Assertions.assertEquals("x",((VariableReferenceNode)((AssignmentNode)tran.Classes.get(0).constructors.get(0).statements.get(0)).target).name);
+		Assertions.assertEquals(0,((NumericLiteralNode)((AssignmentNode)tran.Classes.get(0).constructors.get(0).statements.get(0)).expression).value);
+		Assertions.assertEquals("y",((VariableReferenceNode)((AssignmentNode)tran.Classes.get(0).constructors.get(0).statements.get(1)).target).name);
+		Assertions.assertEquals("",((StringLiteralNode)((AssignmentNode)tran.Classes.get(0).constructors.get(0).statements.get(1)).expression).value);
+		Assertions.assertEquals(0,tran.Classes.get(0).methods.size());
+		Assertions.assertEquals(2,tran.Classes.get(0).members.size());
+		Assertions.assertEquals("x",((MemberNode)tran.Classes.get(0).members.get(0)).declaration.name);
+		Assertions.assertEquals("number",((MemberNode)tran.Classes.get(0).members.get(0)).declaration.type);
+		Assertions.assertEquals("y",((MemberNode)tran.Classes.get(0).members.get(1)).declaration.name);
+		Assertions.assertEquals("string",((MemberNode)tran.Classes.get(0).members.get(1)).declaration.type);
+		Assertions.assertEquals(0,tran.Interfaces.size());
+		Assertions.assertEquals("Example1",tran.Classes.get(0).name);
+		Assertions.assertEquals(0,tran.Classes.get(0).interfaces.size());
+		Assertions.assertEquals(1,tran.Classes.get(0).constructors.size());
+		Assertions.assertEquals(0,tran.Classes.get(0).constructors.get(0).parameters.size());
+		Assertions.assertEquals(2,tran.Classes.get(0).constructors.get(0).statements.size());
+		Assertions.assertEquals("x",((VariableReferenceNode)((AssignmentNode)tran.Classes.get(0).constructors.get(0).statements.get(0)).target).name);
+		Assertions.assertEquals(0,((NumericLiteralNode)((AssignmentNode)tran.Classes.get(0).constructors.get(0).statements.get(0)).expression).value);
+		Assertions.assertEquals("y",((VariableReferenceNode)((AssignmentNode)tran.Classes.get(0).constructors.get(0).statements.get(1)).target).name);
+		Assertions.assertEquals("",((StringLiteralNode)((AssignmentNode)tran.Classes.get(0).constructors.get(0).statements.get(1)).expression).value);
+		Assertions.assertEquals(0,tran.Classes.get(0).methods.size());
+		Assertions.assertEquals(2,tran.Classes.get(0).members.size());
+		Assertions.assertEquals("x",((MemberNode)tran.Classes.get(0).members.get(0)).declaration.name);
+		Assertions.assertEquals("number",((MemberNode)tran.Classes.get(0).members.get(0)).declaration.type);
+		Assertions.assertEquals("y",((MemberNode)tran.Classes.get(0).members.get(1)).declaration.name);
+		Assertions.assertEquals("string",((MemberNode)tran.Classes.get(0).members.get(1)).declaration.type);
+	}
+}

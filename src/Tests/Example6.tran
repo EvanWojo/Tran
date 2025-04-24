@@ -1,0 +1,7 @@
+class Example6
+    shared square(number x) : number s
+		s = x * x
+    private shared start()
+		number t
+		t = 3.07
+		t = Example6.square(t)

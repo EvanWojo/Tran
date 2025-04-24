@@ -1,0 +1,16 @@
+interface someName
+    square() : number s
+
+class TranExample implements someName
+    shared start()
+        number x = 10
+        number y = TranExample.square(x)
+        console.print(y)
+
+    square(number x) : number s {The method we defined in the interface is used here!}
+        s = x*x
+
+class UseTranExample
+	someMethod()
+		someName t = new TranExample() {t is an instance of someName}
+		t.square(20)

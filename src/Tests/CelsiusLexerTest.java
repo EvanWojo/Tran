@@ -1,0 +1,303 @@
+package Tests;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import Tran.*;
+public class CelsiusLexerTest{
+
+	@Test
+	public void CelsiusLexerTestTest() throws Exception {
+		var lexer = new Lexer(
+			"class celsius\n"+
+			"    number temperature\n"+
+			"            \n"+
+			"    construct(number t)\n"+
+			"        temperature = t\n"+
+			"       \n"+
+			"    fromFahrenheit(fahrenheit f)\n"+
+			"        temperature = (f.get() -32)*5/9\n"+
+			"\n"+
+			"    toFahrenheit() : fahrenheit f \n"+
+			"        number convert\n"+
+			"        convert = (temperature * 9 / 5 ) + 32\n"+
+			"        f = new fahrenheit(convert)\n"+
+			"        \n"+
+			"    get() : number c\n"+
+			"        c = temperature \n"+
+			"        \n"+
+			"    shared start()\n"+
+			"        fahrenheit f \n"+
+			"        celsius back\n"+
+			"        celsius ten \n"+
+			"        ten = new celsius(10)\n"+
+			"        console.write(\"Celsius\")\n"+
+			"        console.write(ten.get())\n"+
+			"        console.write(\"Fahrenheit\")\n"+
+			"        f = ten.toFahrenheit()\n"+
+			"        console.write(f.get())\n"+
+			"        back = f.toCelsius()\n"+
+			"        console.write(\"Celsius\")\n"+
+			"        console.write(back.get())\n"+
+			"" );
+		var tokens = lexer.Lex();
+		//Assertions.assertEquals(188, tokens.size());
+		Assertions.assertEquals(Token.TokenTypes.CLASS, tokens.get(0).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(1).getType());
+		Assertions.assertEquals("celsius", tokens.get(1).getValue());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(2).getType());
+		Assertions.assertEquals(Token.TokenTypes.INDENT, tokens.get(3).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(4).getType());
+		Assertions.assertEquals("number", tokens.get(4).getValue());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(5).getType());
+		Assertions.assertEquals("temperature", tokens.get(5).getValue());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(6).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(7).getType());
+		Assertions.assertEquals(Token.TokenTypes.CONSTRUCT, tokens.get(8).getType());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(9).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(10).getType());
+		Assertions.assertEquals("number", tokens.get(10).getValue());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(11).getType());
+		Assertions.assertEquals("t", tokens.get(11).getValue());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(12).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(13).getType());
+		Assertions.assertEquals(Token.TokenTypes.INDENT, tokens.get(14).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(15).getType());
+		Assertions.assertEquals("temperature", tokens.get(15).getValue());
+		Assertions.assertEquals(Token.TokenTypes.ASSIGN, tokens.get(16).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(17).getType());
+		Assertions.assertEquals("t", tokens.get(17).getValue());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(18).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(19).getType());
+		Assertions.assertEquals(Token.TokenTypes.DEDENT, tokens.get(20).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(21).getType());
+		Assertions.assertEquals("fromFahrenheit", tokens.get(21).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(22).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(23).getType());
+		Assertions.assertEquals("fahrenheit", tokens.get(23).getValue());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(24).getType());
+		Assertions.assertEquals("f", tokens.get(24).getValue());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(25).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(26).getType());
+		Assertions.assertEquals(Token.TokenTypes.INDENT, tokens.get(27).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(28).getType());
+		Assertions.assertEquals("temperature", tokens.get(28).getValue());
+		Assertions.assertEquals(Token.TokenTypes.ASSIGN, tokens.get(29).getType());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(30).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(31).getType());
+		Assertions.assertEquals("f", tokens.get(31).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DOT, tokens.get(32).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(33).getType());
+		Assertions.assertEquals("get", tokens.get(33).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(34).getType());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(35).getType());
+		Assertions.assertEquals(Token.TokenTypes.MINUS, tokens.get(36).getType());
+		Assertions.assertEquals(Token.TokenTypes.NUMBER, tokens.get(37).getType());
+		Assertions.assertEquals("32", tokens.get(37).getValue());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(38).getType());
+		Assertions.assertEquals(Token.TokenTypes.TIMES, tokens.get(39).getType());
+		Assertions.assertEquals(Token.TokenTypes.NUMBER, tokens.get(40).getType());
+		Assertions.assertEquals("5", tokens.get(40).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DIVIDE, tokens.get(41).getType());
+		Assertions.assertEquals(Token.TokenTypes.NUMBER, tokens.get(42).getType());
+		Assertions.assertEquals("9", tokens.get(42).getValue());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(43).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(44).getType());
+		Assertions.assertEquals(Token.TokenTypes.DEDENT, tokens.get(45).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(46).getType());
+		Assertions.assertEquals("toFahrenheit", tokens.get(46).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(47).getType());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(48).getType());
+		Assertions.assertEquals(Token.TokenTypes.COLON, tokens.get(49).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(50).getType());
+		Assertions.assertEquals("fahrenheit", tokens.get(50).getValue());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(51).getType());
+		Assertions.assertEquals("f", tokens.get(51).getValue());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(52).getType());
+		Assertions.assertEquals(Token.TokenTypes.INDENT, tokens.get(53).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(54).getType());
+		Assertions.assertEquals("number", tokens.get(54).getValue());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(55).getType());
+		Assertions.assertEquals("convert", tokens.get(55).getValue());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(56).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(57).getType());
+		Assertions.assertEquals("convert", tokens.get(57).getValue());
+		Assertions.assertEquals(Token.TokenTypes.ASSIGN, tokens.get(58).getType());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(59).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(60).getType());
+		Assertions.assertEquals("temperature", tokens.get(60).getValue());
+		Assertions.assertEquals(Token.TokenTypes.TIMES, tokens.get(61).getType());
+		Assertions.assertEquals(Token.TokenTypes.NUMBER, tokens.get(62).getType());
+		Assertions.assertEquals("9", tokens.get(62).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DIVIDE, tokens.get(63).getType());
+		Assertions.assertEquals(Token.TokenTypes.NUMBER, tokens.get(64).getType());
+		Assertions.assertEquals("5", tokens.get(64).getValue());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(65).getType());
+		Assertions.assertEquals(Token.TokenTypes.PLUS, tokens.get(66).getType());
+		Assertions.assertEquals(Token.TokenTypes.NUMBER, tokens.get(67).getType());
+		Assertions.assertEquals("32", tokens.get(67).getValue());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(68).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(69).getType());
+		Assertions.assertEquals("f", tokens.get(69).getValue());
+		Assertions.assertEquals(Token.TokenTypes.ASSIGN, tokens.get(70).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEW, tokens.get(71).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(72).getType());
+		Assertions.assertEquals("fahrenheit", tokens.get(72).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(73).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(74).getType());
+		Assertions.assertEquals("convert", tokens.get(74).getValue());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(75).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(76).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(77).getType());
+		Assertions.assertEquals(Token.TokenTypes.DEDENT, tokens.get(78).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(79).getType());
+		Assertions.assertEquals("get", tokens.get(79).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(80).getType());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(81).getType());
+		Assertions.assertEquals(Token.TokenTypes.COLON, tokens.get(82).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(83).getType());
+		Assertions.assertEquals("number", tokens.get(83).getValue());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(84).getType());
+		Assertions.assertEquals("c", tokens.get(84).getValue());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(85).getType());
+		Assertions.assertEquals(Token.TokenTypes.INDENT, tokens.get(86).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(87).getType());
+		Assertions.assertEquals("c", tokens.get(87).getValue());
+		Assertions.assertEquals(Token.TokenTypes.ASSIGN, tokens.get(88).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(89).getType());
+		Assertions.assertEquals("temperature", tokens.get(89).getValue());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(90).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(91).getType());
+		Assertions.assertEquals(Token.TokenTypes.DEDENT, tokens.get(92).getType());
+		Assertions.assertEquals(Token.TokenTypes.SHARED, tokens.get(93).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(94).getType());
+		Assertions.assertEquals("start", tokens.get(94).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(95).getType());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(96).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(97).getType());
+		Assertions.assertEquals(Token.TokenTypes.INDENT, tokens.get(98).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(99).getType());
+		Assertions.assertEquals("fahrenheit", tokens.get(99).getValue());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(100).getType());
+		Assertions.assertEquals("f", tokens.get(100).getValue());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(101).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(102).getType());
+		Assertions.assertEquals("celsius", tokens.get(102).getValue());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(103).getType());
+		Assertions.assertEquals("back", tokens.get(103).getValue());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(104).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(105).getType());
+		Assertions.assertEquals("celsius", tokens.get(105).getValue());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(106).getType());
+		Assertions.assertEquals("ten", tokens.get(106).getValue());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(107).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(108).getType());
+		Assertions.assertEquals("ten", tokens.get(108).getValue());
+		Assertions.assertEquals(Token.TokenTypes.ASSIGN, tokens.get(109).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEW, tokens.get(110).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(111).getType());
+		Assertions.assertEquals("celsius", tokens.get(111).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(112).getType());
+		Assertions.assertEquals(Token.TokenTypes.NUMBER, tokens.get(113).getType());
+		Assertions.assertEquals("10", tokens.get(113).getValue());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(114).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(115).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(116).getType());
+		Assertions.assertEquals("console", tokens.get(116).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DOT, tokens.get(117).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(118).getType());
+		Assertions.assertEquals("write", tokens.get(118).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(119).getType());
+		Assertions.assertEquals(Token.TokenTypes.QUOTEDSTRING, tokens.get(120).getType());
+		Assertions.assertEquals("Celsius", tokens.get(120).getValue());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(121).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(122).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(123).getType());
+		Assertions.assertEquals("console", tokens.get(123).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DOT, tokens.get(124).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(125).getType());
+		Assertions.assertEquals("write", tokens.get(125).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(126).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(127).getType());
+		Assertions.assertEquals("ten", tokens.get(127).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DOT, tokens.get(128).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(129).getType());
+		Assertions.assertEquals("get", tokens.get(129).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(130).getType());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(131).getType());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(132).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(133).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(134).getType());
+		Assertions.assertEquals("console", tokens.get(134).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DOT, tokens.get(135).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(136).getType());
+		Assertions.assertEquals("write", tokens.get(136).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(137).getType());
+		Assertions.assertEquals(Token.TokenTypes.QUOTEDSTRING, tokens.get(138).getType());
+		Assertions.assertEquals("Fahrenheit", tokens.get(138).getValue());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(139).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(140).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(141).getType());
+		Assertions.assertEquals("f", tokens.get(141).getValue());
+		Assertions.assertEquals(Token.TokenTypes.ASSIGN, tokens.get(142).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(143).getType());
+		Assertions.assertEquals("ten", tokens.get(143).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DOT, tokens.get(144).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(145).getType());
+		Assertions.assertEquals("toFahrenheit", tokens.get(145).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(146).getType());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(147).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(148).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(149).getType());
+		Assertions.assertEquals("console", tokens.get(149).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DOT, tokens.get(150).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(151).getType());
+		Assertions.assertEquals("write", tokens.get(151).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(152).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(153).getType());
+		Assertions.assertEquals("f", tokens.get(153).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DOT, tokens.get(154).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(155).getType());
+		Assertions.assertEquals("get", tokens.get(155).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(156).getType());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(157).getType());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(158).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(159).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(160).getType());
+		Assertions.assertEquals("back", tokens.get(160).getValue());
+		Assertions.assertEquals(Token.TokenTypes.ASSIGN, tokens.get(161).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(162).getType());
+		Assertions.assertEquals("f", tokens.get(162).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DOT, tokens.get(163).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(164).getType());
+		Assertions.assertEquals("toCelsius", tokens.get(164).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(165).getType());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(166).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(167).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(168).getType());
+		Assertions.assertEquals("console", tokens.get(168).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DOT, tokens.get(169).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(170).getType());
+		Assertions.assertEquals("write", tokens.get(170).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(171).getType());
+		Assertions.assertEquals(Token.TokenTypes.QUOTEDSTRING, tokens.get(172).getType());
+		Assertions.assertEquals("Celsius", tokens.get(172).getValue());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(173).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(174).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(175).getType());
+		Assertions.assertEquals("console", tokens.get(175).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DOT, tokens.get(176).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(177).getType());
+		Assertions.assertEquals("write", tokens.get(177).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(178).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(179).getType());
+		Assertions.assertEquals("back", tokens.get(179).getValue());
+		Assertions.assertEquals(Token.TokenTypes.DOT, tokens.get(180).getType());
+		Assertions.assertEquals(Token.TokenTypes.WORD, tokens.get(181).getType());
+		Assertions.assertEquals("get", tokens.get(181).getValue());
+		Assertions.assertEquals(Token.TokenTypes.LPAREN, tokens.get(182).getType());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(183).getType());
+		Assertions.assertEquals(Token.TokenTypes.RPAREN, tokens.get(184).getType());
+		Assertions.assertEquals(Token.TokenTypes.NEWLINE, tokens.get(185).getType());
+		Assertions.assertEquals(Token.TokenTypes.DEDENT, tokens.get(186).getType());
+		Assertions.assertEquals(Token.TokenTypes.DEDENT, tokens.get(187).getType());
+	}
+}

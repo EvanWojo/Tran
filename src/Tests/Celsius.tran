@@ -1,0 +1,30 @@
+class celsius
+    number temperature
+            
+    construct(number t)
+        temperature = t
+       
+    fromFahrenheit(fahrenheit f)
+        temperature = (f.get() -32)*5/9
+
+    toFahrenheit() : fahrenheit f 
+        number convert
+        convert = (temperature * 9 / 5 ) + 32
+        f = new fahrenheit(convert)
+        
+    get() : number c
+        c = temperature 
+        
+    shared start()
+        fahrenheit f 
+        celsius back
+        celsius ten 
+        ten = new celsius(10)
+        console.write("Celsius")
+        console.write(ten.get())
+        console.write("Fahrenheit")
+        f = ten.toFahrenheit()
+        console.write(f.get())
+        back = f.toCelsius()
+        console.write("Celsius")
+        console.write(back.get())

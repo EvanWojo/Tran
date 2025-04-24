@@ -1,0 +1,8 @@
+class Example7
+    shared allMyData(number x) : number n, string t
+        t = "hello"
+        n = x
+    shared start()
+        number num 
+        string s
+        num, s = Example7.allMyData(45)

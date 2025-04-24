@@ -1,0 +1,9 @@
+class Example3
+    number x
+    string y
+    construct() {called when someone uses "new" }
+        x = 0
+        y = ""
+    construct(number n) {An example of an overloaded constructor}
+        x = n
+        y = ""

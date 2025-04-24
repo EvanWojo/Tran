@@ -1,0 +1,6 @@
+class Example1
+    number x
+    string y
+    construct() {called when someone uses “new” }
+        x = 0
+        y = ""

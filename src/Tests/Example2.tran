@@ -1,0 +1,11 @@
+class Example2
+    number x
+    string y
+construct() {called when someone uses “new” }
+    x = 0
+    y = ""
+doSomeWork()
+    x=10
+    loop x.times()
+        console.print("In The Block")
+    console.print("Out of the block")

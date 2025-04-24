@@ -1,0 +1,11 @@
+class Example4
+	number a
+{doesn’t require an instance of Example. To use it: Example.helloWorld()  }
+    shared helloWorld()  { no parameters, no return value, public} 
+		console.print("Hello World")
+
+	add(number a, number b) : number sum {parameters, return values, public}
+		sum = a + b
+	
+	private setA()  {can only be called inside the class}
+		a = 42 
